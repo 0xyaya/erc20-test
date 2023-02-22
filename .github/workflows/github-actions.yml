@@ -13,5 +13,7 @@ jobs:
               uses: codecov/codecov-action@v3
             - name: Install dependencies for test
               run: npm install
+            - name: Run ganache
+              run: ganache
             - name: Run tests
               run: npm run test
