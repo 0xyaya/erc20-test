@@ -11,5 +11,5 @@ jobs:
                   node-version: '14'
             - name: Upload coverage reports to Codecov
               uses: codecov/codecov-action@v3
-            - run: npm install -g bats
-            - run: bats -v
+            - name: Run tests
+              run: npm run test

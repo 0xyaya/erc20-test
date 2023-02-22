@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "test": "truffle test tests/*"
+  },
   "dependencies": {
     "@openzeppelin/contracts": "^4.8.1",
     "@openzeppelin/test-helpers": "^0.5.16",
