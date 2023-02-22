@@ -14,4 +14,4 @@ jobs:
             - name: Install Truffle Dependencies
               run: npm install
             - name: Run Truffle Test with CI=true for Codechecks
-              run: CI=true truffle test
+              run: CI=true truffle test --network development
