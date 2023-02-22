@@ -9,11 +9,9 @@ jobs:
             - uses: actions/setup-node@v3
               with:
                   node-version: '14'
-            - name: Upload coverage reports to Codecov
-              uses: codecov/codecov-action@v3
-            - name: Install dependencies for test
+            - name: Install Truffle
+              run: npm install truffle -g
+            - name: Install Truffle Dependencies
               run: npm install
-            - name: Run ganache
-              run: ganache
-            - name: Run tests
-              run: npm run test
+            - name: Run Truffle Test with CI=true for Codechecks
+              run: CI=true truffle test
