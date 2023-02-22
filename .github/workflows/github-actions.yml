@@ -2,7 +2,7 @@ name: github-actions
 run-name: GitHub Actions
 on: [push]
 jobs:
-    check-bats-version:
+    github-actions:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
@@ -11,9 +11,11 @@ jobs:
                   node-version: '14'
             - name: Install Truffle
               run: npm install truffle -g
-            - name: Install Truffle Dependencies
-              run: npm install
+            - name: Install Ganache
+              run: npm install ganache -g
             - name: Run Ganache
               run: ganache
+            - name: Install Truffle Dependencies
+              run: npm install
             - name: Run Truffle Test with CI=true for Codechecks
               run: CI=true truffle test --network development
